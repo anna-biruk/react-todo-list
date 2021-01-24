@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "apexcharts": "^3.23.0",
+    "dayjs": "^1.9.7",
+    "i18next": "^19.8.4",
+    "json-server": "^0.16.3",
+    "lodash": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-charts": "^3.0.15",
+    "react-i18next": "^11.8.4",
+    "react-minimal-pie-chart": "^8.1.0",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1"
   },
@@ -32,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "uuidv4": "^6.2.6"
   }
 }

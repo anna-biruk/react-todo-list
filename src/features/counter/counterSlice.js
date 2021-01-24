@@ -1,4 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+
+export const getTodolistItem = createAsyncThunk(
+    'todolist/getTodolistItem',
+    async ()=>{
+      const response = await fetch(`http://localhost:8080/items`);
+      const items = await response.json();
+      return {items}
+    }
+)
 
 export const counterSlice = createSlice({
   name: 'counter',
