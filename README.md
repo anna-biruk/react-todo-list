@@ -13,4 +13,4 @@
 - dayjs for date/time manipulations
 
 
-<img src="./src/assets/example.png">
+<img src="./src/assets/example1.png">

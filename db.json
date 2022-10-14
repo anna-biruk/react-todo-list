@@ -14,7 +14,7 @@
       "name": "code",
       "isLoading": false,
       "isEditing": false,
-      "isChecked": true,
+      "isChecked": false,
       "createdAt": "2022-10-14T14:48:21.035Z",
       "importance": 1
     },
