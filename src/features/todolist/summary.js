@@ -1,17 +1,17 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import List from "@material-ui/core/List";
 import ListItem from '@material-ui/core/ListItem';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import ListItemText from '@material-ui/core/ListItemText';
-import {useDispatch, useSelector} from "react-redux";
-import {Chart} from "react-google-charts";
+import { useDispatch, useSelector } from "react-redux";
+import { Chart } from "react-google-charts";
 import {
     getCheckedItems,
     selectCheckedCount,
     selectOverallCount,
     selectUncompletedCount
 } from "./todolistSlice";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,45 +24,10 @@ const useStyles = makeStyles((theme) => ({
     },
 
 }));
-const pieOptions = {
-    title: "",
-    pieHole: 0.6,
-    slices: [
-        {
-            color: "#2BB673"
-        },
-        {
-            color: "#d91e48"
-        },
-        {
-            color: "#007fad"
-        },
-        {
-            color: "#e9a227"
-        }
-    ],
-    legend: {
-        position: "bottom",
-        alignment: "center",
-        textStyle: {
-            color: "#000000",
-            fontSize: 14
-        }
-    },
-    tooltip: {
-        showColorCode: true
-    },
-    chartArea: {
-        left: 0,
-        top: 0,
-        width: "100%",
-        height: "80%"
-    },
-    fontName: "Roboto"
-};
 
 
-export function SummaryForm({item}) {
+
+export function SummaryForm({ item }) {
     const dispatch = useDispatch();
     const classes = useStyles();
     const checkedCount = useSelector(selectCheckedCount);
@@ -73,19 +38,19 @@ export function SummaryForm({item}) {
         dispatch(getCheckedItems())
     }, [dispatch]);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <List className={classes.root}>
             <div className={classes.checkedItem}>
                 <ListItem>
-                    <ListItemText primary={<div>{t('Completed')}: {checkedCount}</div>}/>
+                    <ListItemText primary={<div>{t('Completed')}: {checkedCount}</div>} />
                 </ListItem>
                 <ListItem>
-                    <ListItemText primary={<div>{t('Uncompleted')}: {uncompletedCount}</div>}/>
+                    <ListItemText primary={<div>{t('Uncompleted')}: {uncompletedCount}</div>} />
                 </ListItem>
                 <ListItem>
-                    <ListItemText primary={<div>{t('Overall')}: {overallCount}</div>}/>
+                    <ListItemText primary={<div>{t('Overall')}: {overallCount}</div>} />
                 </ListItem>
             </div>
             <div>
@@ -119,7 +84,7 @@ export function SummaryForm({item}) {
                         [t('Completed'), Number.parseInt(checkedCount)],
                         [t('Uncompleted'), Number.parseInt(uncompletedCount)],
                     ]}
-                    rootProps={{'data-testid': '1'}}
+                    rootProps={{ 'data-testid': '1' }}
                 />
             </div>
         </List>

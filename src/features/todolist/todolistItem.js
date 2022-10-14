@@ -23,9 +23,6 @@ import {
 } from "./todolistSlice";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import InputLabel from "@material-ui/core/InputLabel";
 import {ReactComponent as High} from "../../assets/icons/high.svg";
 import {ReactComponent as Low} from "../../assets/icons/low.svg";
 import {ReactComponent as Medium} from "../../assets/icons/medium.svg";
